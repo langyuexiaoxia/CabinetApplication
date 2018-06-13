@@ -17,7 +17,9 @@ public abstract class BaseActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         ButterKnife.bind(this);
+        //数据初始化
         intData();
+
     }
 
     public abstract int getLayoutId();
