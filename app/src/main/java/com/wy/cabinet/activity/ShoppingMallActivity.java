@@ -1,6 +1,8 @@
 package com.wy.cabinet.activity;
 
 import android.content.Intent;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -12,6 +14,7 @@ import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 import com.lzy.okgo.request.base.Request;
 import com.wy.cabinet.R;
+import com.wy.cabinet.adapters.GoodsAdapter;
 import com.wy.cabinet.model.ApiRequest;
 import com.wy.cabinet.model.ApiResponse;
 import com.wy.cabinet.model.LoginReq;
@@ -37,6 +40,11 @@ public class ShoppingMallActivity extends BaseActivity{
 
     @BindView(R.id.ll_content)
     LinearLayout ll_content;
+    @BindView(R.id.recycler_goods)
+    RecyclerView recycler_goods;
+
+
+
     @Override
     public int getLayoutId() {
         return R.layout.activity_shopping_mall;
@@ -44,8 +52,13 @@ public class ShoppingMallActivity extends BaseActivity{
 
     @Override
     public void intData() {
-        login();
+        recycler_goods.setLayoutManager(new GridLayoutManager(this,4));
+        GoodsAdapter goodsAdapter=new GoodsAdapter(this);
+        recycler_goods.setAdapter(goodsAdapter);
+
+//        login();
     }
+
 
     public void login() {
         LoginReq loginReq = new LoginReq();
