@@ -52,11 +52,7 @@ public class ShoppingMallActivity extends BaseActivity{
 
     @Override
     public void intData() {
-        recycler_goods.setLayoutManager(new GridLayoutManager(this,4));
-        GoodsAdapter goodsAdapter=new GoodsAdapter(this);
-        recycler_goods.setAdapter(goodsAdapter);
-
-//        login();
+        login();
     }
 
 
@@ -93,6 +89,9 @@ public class ShoppingMallActivity extends BaseActivity{
 
                 if (jsonBean.getStatus() == 1) {
                     ToastUtil.showShort(ShoppingMallActivity.this,"登录成功");
+                    recycler_goods.setLayoutManager(new GridLayoutManager(ShoppingMallActivity.this,4));
+                    GoodsAdapter goodsAdapter=new GoodsAdapter(ShoppingMallActivity.this);
+                    recycler_goods.setAdapter(goodsAdapter);
                 }
             }
 
