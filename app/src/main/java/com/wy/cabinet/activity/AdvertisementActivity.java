@@ -1,25 +1,17 @@
 package com.wy.cabinet.activity;
 
-import android.os.Bundle;
-
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
-import com.wy.cabinet.BaseActivity;
 import com.wy.cabinet.R;
 import com.wy.cabinet.view.NetworkImageHolderView;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
-/**
- * Created by Administrator on 2018/6/13.
- */
-
-public class A_Main extends BaseActivity implements OnItemClickListener {
-
+//待机广告界面
+public class AdvertisementActivity extends BaseActivity implements OnItemClickListener {
 
     @BindView(R.id.A_Banner)
     ConvenientBanner ABanner;
@@ -28,8 +20,9 @@ public class A_Main extends BaseActivity implements OnItemClickListener {
 
     @Override
     public int getLayoutId() {
-        return R.layout.a_main;
+        return R.layout.activity_advertisement;
     }
+
 
     @Override
     public void intData() {
@@ -52,10 +45,12 @@ public class A_Main extends BaseActivity implements OnItemClickListener {
 
     /**
      * banner 监听
+     *
      * @param position
      */
     @Override
     public void onItemClick(int position) {
 
     }
+
 }

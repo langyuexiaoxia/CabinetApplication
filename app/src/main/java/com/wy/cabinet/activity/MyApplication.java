@@ -1,4 +1,4 @@
-package com.wy.cabinet;
+package com.wy.cabinet.activity;
 
 import android.app.Application;
 

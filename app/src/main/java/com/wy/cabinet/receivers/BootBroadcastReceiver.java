@@ -5,10 +5,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.wy.cabinet.AdvertisementActivity;
-import com.wy.cabinet.ShoppingMallActivity;
+import com.wy.cabinet.activity.AdvertisementActivity;
 
 /**
  * Created by Administrator on 2018/6/12.

@@ -1,8 +1,6 @@
-package com.wy.cabinet;
+package com.wy.cabinet.activity;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
+import com.wy.cabinet.R;
 
 /**
  * Created by Administrator on 2018/6/12.
