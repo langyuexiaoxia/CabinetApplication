@@ -1,5 +1,6 @@
 package com.wy.cabinet.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -10,23 +11,24 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.wy.cabinet.R;
-import com.wy.cabinet.activity.ShoppingCartActivity;
+import com.wy.cabinet.activity.ShoppingMallActivity;
 
 /**
- * Created by Administrator on 2018/6/14.
- * 商品列表adapter
+ * Created by Administrator on 2018/6/15.
+ * 购物车adapter
  */
 
-public class GoodsAdapter extends RecyclerView.Adapter<GoodsAdapter.MyViewHolder>{
+public class ShoppingCartAdapter extends RecyclerView.Adapter<ShoppingCartAdapter.MyViewHolder>{
+
     private Context context;
 
-    public GoodsAdapter( Context context){
+    public ShoppingCartAdapter( Context context){
         this.context=context;
     }
 
     @Override
-    public GoodsAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        MyViewHolder holder = new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_goods, parent, false));
+    public ShoppingCartAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        MyViewHolder holder = new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_shopping_cart, parent, false));
         return holder;
     }
 
@@ -36,8 +38,9 @@ public class GoodsAdapter extends RecyclerView.Adapter<GoodsAdapter.MyViewHolder
         holder.ll_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,ShoppingCartActivity.class);
+                Intent intent=new Intent(context, ShoppingMallActivity.class);
                 context.startActivity(intent);
+
             }
         });
 
@@ -61,4 +64,5 @@ public class GoodsAdapter extends RecyclerView.Adapter<GoodsAdapter.MyViewHolder
             ll_item = (LinearLayout) view.findViewById(R.id.ll_item);
         }
     }
+
 }

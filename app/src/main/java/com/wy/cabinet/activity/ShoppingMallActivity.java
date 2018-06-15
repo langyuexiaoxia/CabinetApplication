@@ -1,11 +1,10 @@
 package com.wy.cabinet.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -29,6 +28,7 @@ import com.wy.cabinet.view.LoadingDialog;
 import java.lang.reflect.Type;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -36,10 +36,9 @@ import butterknife.OnClick;
  * 商品选购界面
  */
 
-public class ShoppingMallActivity extends BaseActivity{
+public class ShoppingMallActivity extends BaseActivity {
 
-    @BindView(R.id.ll_content)
-    LinearLayout ll_content;
+
     @BindView(R.id.recycler_goods)
     RecyclerView recycler_goods;
 
@@ -88,9 +87,9 @@ public class ShoppingMallActivity extends BaseActivity{
                 SPUtil.save(ShoppingMallActivity.this, "userId", user.getUserId());
 
                 if (jsonBean.getStatus() == 1) {
-                    ToastUtil.showShort(ShoppingMallActivity.this,"登录成功");
-                    recycler_goods.setLayoutManager(new GridLayoutManager(ShoppingMallActivity.this,4));
-                    GoodsAdapter goodsAdapter=new GoodsAdapter(ShoppingMallActivity.this);
+                    ToastUtil.showShort(ShoppingMallActivity.this, "登录成功");
+                    recycler_goods.setLayoutManager(new GridLayoutManager(ShoppingMallActivity.this, 4));
+                    GoodsAdapter goodsAdapter = new GoodsAdapter(ShoppingMallActivity.this);
                     recycler_goods.setAdapter(goodsAdapter);
                 }
             }
@@ -103,13 +102,5 @@ public class ShoppingMallActivity extends BaseActivity{
         });
     }
 
-    @OnClick({R.id.ll_content})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.ll_content:
-                Intent intent=new Intent(this,AdvertisementActivity.class);
-                startActivity(intent);
-                break;
-        }
-    }
+
 }

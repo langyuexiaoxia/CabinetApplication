@@ -20,7 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ShoppingMallActivity" />
+        <activity android:name=".activity.ShoppingMallActivity" android:launchMode="singleTask"/>
+        <activity android:name=".activity.ShoppingCartActivity" />
+        <activity android:name=".activity.PayActivity" />
 
         <receiver
             android:name=".receivers.BootBroadcastReceiver"
