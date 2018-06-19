@@ -7,7 +7,7 @@ import android.util.Log;
  */
 
 public class LogUtil {
-    private static final String TAG="wy";
+    private static final String TAG="cabinet";
     public static boolean isDebug=true;
 
 

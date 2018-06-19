@@ -6,6 +6,7 @@ import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheEntity;
 import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.interceptor.HttpLoggingInterceptor;
+import com.tencent.bugly.Bugly;
 import com.wy.cabinet.utils.LogUtil;
 
 import java.util.concurrent.TimeUnit;
@@ -19,15 +20,18 @@ import okhttp3.OkHttpClient;
 
 public class MyApplication extends Application {
 
+
     @Override
     public void onCreate() {
         super.onCreate();
         LogUtil.isDebug = true;//是否打印log
+
         initOkGo();
+        initBugly();
     }
 
+    //初始化okgo
     public void initOkGo() {
-
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor("OkGo");
         //log打印级别，决定了log显示的详细程度
@@ -49,5 +53,12 @@ public class MyApplication extends Application {
                 .setRetryCount(3);                             //全局统一超时重连次数，默认为三次，那么最差的情况会请求4次(一次原始请求，三次重连请求)，不需要可以设置为0
 
     }
+
+    //初始化bugly
+    public void initBugly() {
+        Bugly.init(getApplicationContext(), "8bfb1bbbfb", false);
+    }
+
+
 
 }
