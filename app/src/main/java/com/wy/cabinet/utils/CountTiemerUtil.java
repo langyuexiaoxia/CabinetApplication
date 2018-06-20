@@ -10,7 +10,7 @@ import com.wy.cabinet.activity.AdvertisementActivity;
  * Created by Administrator on 2018/6/20.
  */
 
-public class JumpToAdvertisementUtil extends CountDownTimer{
+public class CountTiemerUtil extends CountDownTimer{
 
     private Context context;
     /**
@@ -20,7 +20,7 @@ public class JumpToAdvertisementUtil extends CountDownTimer{
      * @param countDownInterval The interval along the way to receive
      *                          {@link #onTick(long)} callbacks.
      */
-    public JumpToAdvertisementUtil(long millisInFuture, long countDownInterval,Context context) {
+    public CountTiemerUtil(long millisInFuture, long countDownInterval, Context context) {
         super(millisInFuture, countDownInterval);
         this.context=context;
     }

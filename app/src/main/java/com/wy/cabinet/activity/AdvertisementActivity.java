@@ -1,14 +1,17 @@
 package com.wy.cabinet.activity;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
+import com.raizlabs.android.dbflow.sql.language.SQLite;
 import com.wy.cabinet.R;
 import com.wy.cabinet.model.GoodsModel;
+import com.wy.cabinet.model.User;
 import com.wy.cabinet.view.NetworkImageHolderView;
 
 import java.util.ArrayList;
@@ -33,14 +36,14 @@ public class AdvertisementActivity extends BaseActivity {
     @Override
     public void intData() {
 
-//        for (int i = 0; i < 10; i++) {
-//            GoodsModel goodsModel=new GoodsModel();
-//            goodsModel.name="name"+i;
-//            goodsModel.price=""+i*2;
-//            goodsModel.save();
-//        }
-
-
+        for (int i = 0; i < 10; i++) {
+            GoodsModel goodsModel=new GoodsModel();
+            goodsModel.name="name"+i;
+            goodsModel.price=""+i*2;
+            goodsModel.save();
+        }
+//        SQLite.select().from(User.class).queryList();
+//        Log.i("AdvertisementActivity","list:"+SQLite.select().from(User.class).queryList());
         bannerList = new ArrayList<>();
         bannerList.clear();
         bannerList.add(R.mipmap.toppri_01);
