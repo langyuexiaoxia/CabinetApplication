@@ -36,7 +36,7 @@ import butterknife.OnClick;
  * 商品选购界面
  */
 
-public class ShoppingMallActivity extends BaseActivity {
+public class ShoppingMallActivity extends BaseJumpToAdvertisementActivity {
 
 
     @BindView(R.id.recycler_goods)
@@ -102,5 +102,9 @@ public class ShoppingMallActivity extends BaseActivity {
         });
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        LoadingDialog.hideLoadingDialog();
+    }
 }

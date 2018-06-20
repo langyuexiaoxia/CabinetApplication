@@ -47,4 +47,8 @@ dependencies {
 
     compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
     compile 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    annotationProcessor 'com.github.Raizlabs.DBFlow:dbflow-processor:4.2.4'
+    compile 'com.github.Raizlabs.DBFlow:dbflow-core:4.2.4'
+    compile 'com.github.Raizlabs.DBFlow:dbflow:4.2.4'
 }

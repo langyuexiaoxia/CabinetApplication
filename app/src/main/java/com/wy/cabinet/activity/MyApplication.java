@@ -6,6 +6,7 @@ import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheEntity;
 import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.interceptor.HttpLoggingInterceptor;
+import com.raizlabs.android.dbflow.config.FlowManager;
 import com.tencent.bugly.Bugly;
 import com.wy.cabinet.utils.LogUtil;
 
@@ -28,7 +29,10 @@ public class MyApplication extends Application {
 
         initOkGo();
         initBugly();
+        initDatabase();
     }
+
+
 
     //初始化okgo
     public void initOkGo() {
@@ -59,6 +63,9 @@ public class MyApplication extends Application {
         Bugly.init(getApplicationContext(), "8bfb1bbbfb", false);
     }
 
-
+    //初始化数据库
+    public void initDatabase() {
+        FlowManager.init(this);
+    }
 
 }

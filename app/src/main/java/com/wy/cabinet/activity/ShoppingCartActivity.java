@@ -20,7 +20,7 @@ import butterknife.OnClick;
  * 购物车结算界面
  */
 
-public class ShoppingCartActivity extends BaseActivity {
+public class ShoppingCartActivity extends BaseJumpToAdvertisementActivity {
 
     @BindView(R.id.recycler_shoppingCart)
     RecyclerView recycler_shoppingCart;

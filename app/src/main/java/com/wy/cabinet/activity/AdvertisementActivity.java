@@ -8,6 +8,7 @@ import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 import com.wy.cabinet.R;
+import com.wy.cabinet.model.GoodsModel;
 import com.wy.cabinet.view.NetworkImageHolderView;
 
 import java.util.ArrayList;
@@ -31,6 +32,15 @@ public class AdvertisementActivity extends BaseActivity {
 
     @Override
     public void intData() {
+
+//        for (int i = 0; i < 10; i++) {
+//            GoodsModel goodsModel=new GoodsModel();
+//            goodsModel.name="name"+i;
+//            goodsModel.price=""+i*2;
+//            goodsModel.save();
+//        }
+
+
         bannerList = new ArrayList<>();
         bannerList.clear();
         bannerList.add(R.mipmap.toppri_01);
@@ -52,6 +62,7 @@ public class AdvertisementActivity extends BaseActivity {
                         startActivity(intent);
                     }
                 });
+
     }
 
 

@@ -7,7 +7,7 @@ import com.wy.cabinet.R;
  * 支付方式选择界面
  */
 
-public class PayActivity extends BaseActivity{
+public class PayActivity extends BaseJumpToAdvertisementActivity{
 
     @Override
     public int getLayoutId() {
