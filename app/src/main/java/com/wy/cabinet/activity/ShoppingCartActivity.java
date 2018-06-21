@@ -33,7 +33,7 @@ public class ShoppingCartActivity extends BaseJumpToAdvertisementActivity {
     }
 
     @Override
-    public void intData() {
+    public void initData() {
         recycler_shoppingCart.setLayoutManager(new LinearLayoutManager(this));
         ShoppingCartAdapter shoppingCartAdapter = new ShoppingCartAdapter(this);
         recycler_shoppingCart.setAdapter(shoppingCartAdapter);

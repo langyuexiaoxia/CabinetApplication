@@ -1,6 +1,10 @@
 package com.wy.cabinet.activity;
 
 import android.app.Application;
+import android.os.Environment;
+import android.os.Looper;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheEntity;
@@ -11,6 +15,11 @@ import com.raizlabs.android.dbflow.config.FlowManager;
 import com.tencent.bugly.Bugly;
 import com.wy.cabinet.utils.LogUtil;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
@@ -31,6 +40,7 @@ public class MyApplication extends Application {
         initOkGo();
         initBugly();
         initDatabase();
+
     }
 
 
@@ -69,5 +79,8 @@ public class MyApplication extends Application {
         FlowManager.init(getApplicationContext());
 
     }
+
+
+
 
 }

@@ -10,7 +10,7 @@ import com.wy.cabinet.activity.AdvertisementActivity;
  * Created by Administrator on 2018/6/20.
  */
 
-public class CountTiemerUtil extends CountDownTimer{
+public class CountTimerUtil extends CountDownTimer{
 
     private Context context;
     /**
@@ -20,7 +20,7 @@ public class CountTiemerUtil extends CountDownTimer{
      * @param countDownInterval The interval along the way to receive
      *                          {@link #onTick(long)} callbacks.
      */
-    public CountTiemerUtil(long millisInFuture, long countDownInterval, Context context) {
+    public CountTimerUtil(long millisInFuture, long countDownInterval, Context context) {
         super(millisInFuture, countDownInterval);
         this.context=context;
     }

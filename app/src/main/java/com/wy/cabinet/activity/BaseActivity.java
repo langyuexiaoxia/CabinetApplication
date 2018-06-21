@@ -18,14 +18,14 @@ public abstract class BaseActivity extends Activity{
         setContentView(getLayoutId());
         ButterKnife.bind(this);
         //数据初始化
-        intData();
+        initData();
 
     }
 
     public abstract int getLayoutId();
 
 
-    public abstract void intData();
+    public abstract void initData();
 
 
 }

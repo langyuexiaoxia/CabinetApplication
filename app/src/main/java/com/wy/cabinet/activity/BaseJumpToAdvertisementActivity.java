@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.view.MotionEvent;
 
-import com.wy.cabinet.utils.CountTiemerUtil;
+import com.wy.cabinet.utils.CountTimerUtil;
 
 import butterknife.ButterKnife;
 
@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 
 public abstract class BaseJumpToAdvertisementActivity extends Activity{
 
-    private CountTiemerUtil countTimerView;
+    private CountTimerUtil countTimerView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,18 +26,18 @@ public abstract class BaseJumpToAdvertisementActivity extends Activity{
 
         init();
         //数据初始化
-        intData();
+        initData();
     }
 
     protected  void init(){
         //初始化CountTimer，设置倒计时为2分钟。
-        countTimerView=new CountTiemerUtil(120000,1000,BaseJumpToAdvertisementActivity.this);
+        countTimerView=new CountTimerUtil(120000,1000,BaseJumpToAdvertisementActivity.this);
     }
 
     public abstract int getLayoutId();
 
 
-    public abstract void intData();
+    public abstract void initData();
 
 
     private void timeStart(){

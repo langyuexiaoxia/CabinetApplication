@@ -15,7 +15,7 @@ public class PayActivity extends BaseJumpToAdvertisementActivity{
     }
 
     @Override
-    public void intData() {
+    public void initData() {
 
     }
 }
