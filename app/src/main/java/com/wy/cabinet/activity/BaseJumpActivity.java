@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
  * 定时跳转基类
  */
 
-public abstract class BaseJumpToAdvertisementActivity extends Activity{
+public abstract class BaseJumpActivity extends Activity{
 
     private CountTimerUtil countTimerView;
     @Override
@@ -31,7 +31,7 @@ public abstract class BaseJumpToAdvertisementActivity extends Activity{
 
     protected  void init(){
         //初始化CountTimer，设置倒计时为2分钟。
-        countTimerView=new CountTimerUtil(120000,1000,BaseJumpToAdvertisementActivity.this);
+        countTimerView=new CountTimerUtil(120000,1000,BaseJumpActivity.this);
     }
 
     public abstract int getLayoutId();

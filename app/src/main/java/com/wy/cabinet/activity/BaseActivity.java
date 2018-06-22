@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.wy.cabinet.R;
+import com.wy.cabinet.utils.ViewUtil;
+
 import butterknife.ButterKnife;
 
 /**
@@ -15,6 +18,7 @@ public abstract class BaseActivity extends Activity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        ViewUtil.initSystemBar(this, R.color.red);
         setContentView(getLayoutId());
         ButterKnife.bind(this);
         //数据初始化

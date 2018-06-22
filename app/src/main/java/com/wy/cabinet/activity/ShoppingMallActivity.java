@@ -1,10 +1,7 @@
 package com.wy.cabinet.activity;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.LinearLayout;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -28,15 +25,13 @@ import com.wy.cabinet.view.LoadingDialog;
 import java.lang.reflect.Type;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2018/6/12.
  * 商品选购界面
  */
 
-public class ShoppingMallActivity extends BaseJumpToAdvertisementActivity {
+public class ShoppingMallActivity extends BaseJumpActivity {
 
 
     @BindView(R.id.recycler_goods)

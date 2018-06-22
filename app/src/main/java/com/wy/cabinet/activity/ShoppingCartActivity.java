@@ -1,17 +1,14 @@
 package com.wy.cabinet.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.TextView;
 
 import com.wy.cabinet.R;
 import com.wy.cabinet.adapters.ShoppingCartAdapter;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -20,7 +17,7 @@ import butterknife.OnClick;
  * 购物车结算界面
  */
 
-public class ShoppingCartActivity extends BaseJumpToAdvertisementActivity {
+public class ShoppingCartActivity extends BaseJumpActivity {
 
     @BindView(R.id.recycler_shoppingCart)
     RecyclerView recycler_shoppingCart;
